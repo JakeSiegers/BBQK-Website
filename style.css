@@ -6,3 +6,60 @@ Author URI: http://jakesiegers.com/
 Version: 1.0
 Tags: barbeque, kitten, custom, theme, stuff, improv, lolz
 */
+#wpadminbar{
+	display:none;
+}
+
+body{
+	overflow-y:scroll;
+	marrgin:0px;
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	background: black; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  black 0%, #771a1a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,black), color-stop(100%,#771a1a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  black 0%,#771a1a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  black 0%,#771a1a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  black 0%,#771a1a 100%); /* IE10+ */
+	background: linear-gradient(45deg,  black 0%,#771a1a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='black', endColorstr='#771a1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	 -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	      box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.bbqk-jumbo{
+	background:none;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+
+.bbqk-jumbo h1 {
+  font-size: 100px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.bbqk-jumbo p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+
+
+
+.bbqk-jumbo .container {
+  position: relative;
+  z-index: 2;
+}
+.barbequeLogo{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(img/background3.gif) no-repeat 0px 0px;
+}
+
+

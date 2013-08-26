@@ -6,13 +6,11 @@ Author URI: http://jakesiegers.com/
 Version: 1.0
 Tags: barbeque, kitten, custom, theme, stuff, improv, lolz
 */
-#wpadminbar{
-	display:none;
-}
 
 body{
 	overflow-y:scroll;
-	marrgin:0px;
+	margin:0px;
+	margin-top:50px;
 	position: relative;
 	padding: 40px 0;
 	color: #fff;
@@ -28,6 +26,13 @@ body{
 	 -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 	      box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
+
+.bbqk-scheduleTable{
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 .bbqk-jumbo{
 	background:none;
 	text-align: center;

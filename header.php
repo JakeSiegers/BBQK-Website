@@ -9,12 +9,18 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
-		<link href='<?php echo get_template_directory_uri(); ?>/style.css' rel='stylesheet' type='text/css'>
+		<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel='stylesheet' type='text/css'>
 
+		<!--<script src="<?php echo get_template_directory_uri(); ?>/js/video.js"></script>-->
 
 		<?php wp_head(); ?>
 	</head>
 <body onunload="">
+	<video id="video_background" autoplay >
+   		<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+    	<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+   		<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+  	</video>
 	<div class="barbequeLogo">
 
 	<header class="navbar navbar-default navbar-inverse navbar-fixed-top bbqk-nav" role="navigation">

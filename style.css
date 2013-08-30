@@ -8,23 +8,32 @@ Tags: barbeque, kitten, custom, theme, stuff, improv, lolz
 */
 
 body{
+	/*
 	overflow-y:scroll;
 	margin:0px;
 	margin-top:50px;
 	position: relative;
 	padding: 40px 0;
 	color: #fff;
-	background: black; /* Old browsers */
-	background: -moz-linear-gradient(45deg,  black 0%, #771a1a 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,black), color-stop(100%,#771a1a)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(45deg,  black 0%,#771a1a 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(45deg,  black 0%,#771a1a 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(45deg,  black 0%,#771a1a 100%); /* IE10+ */
-	background: linear-gradient(45deg,  black 0%,#771a1a 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='black', endColorstr='#771a1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: black;
+	background: -moz-linear-gradient(45deg,  black 0%, #771a1a 100%); 
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,black), color-stop(100%,#771a1a)); 
+	background: -webkit-linear-gradient(45deg,  black 0%,#771a1a 100%); 
+	background: -o-linear-gradient(45deg,  black 0%,#771a1a 100%); 
+	background: -ms-linear-gradient(45deg,  black 0%,#771a1a 100%); 
+	background: linear-gradient(45deg,  black 0%,#771a1a 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='black', endColorstr='#771a1a',GradientType=1 ); 
 	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 	 -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 	      box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	 */
+}
+
+#video_background {
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .bbqk-scheduleTable{

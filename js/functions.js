@@ -1,17 +1,22 @@
 
-var bbqk_bgHeight=0;
+var bbqk_bgHeight=0,
+	bbqk_tiltCount=0;
 
 window.onload = function() {
 	bbqk_updateBG();
 
 	$(window).resize(function() {
-		console.log("resized");
+		//console.log("resized");
 		bbqk_updateBG();
 	});
 
 	//setInterval(function() {
     //	bbqk_paralaxCatUpdate();
 	//}, 0);
+
+	setInterval(function(){
+		bbqk_adjustLogoTilt();
+	},0);
 
 	$('body').mousemove(function(e){
 		bbqk_bgHeight=e.pageY
@@ -20,7 +25,14 @@ window.onload = function() {
 
 };
 
-
+function bbqk_adjustLogoTilt(){
+	//$('#bbqk-logo').stop();
+	$('#bbqk-logo').transition({ rotate: ((Math.sin(bbqk_tiltCount)*20)-10)+'deg' });
+	bbqk_tiltCount+=(Math.PI/6);
+	if(bbqk_tiltCount>(2*Math.PI)){
+		bbqk_tiltCount=0;
+	}
+}
 
 function bbqk_paralaxCatUpdate(){
 	$('.barbequeLogo').css("background-position", function(){
@@ -35,12 +47,18 @@ function bbqk_updateBG(){
 	$('.barbequeLogo').css("background-size", function(){ 
     	return $(window).height()+"px "+$(window).height()+"px";
 	});
+
+	console.log("adjusting logo");
+	console.log(($(window).height()/2)-($('#bbqk-logo').height()/2)+"px");
+	//$('#bbqk-logo').stop();
+	$('#bbqk-logo').css("margin-top",($(window).height()/2)-($('#bbqk-logo').height()/2)+"px");
 	
-	console.log($('#video_background').width());
-	console.log($(window).width());
+	//console.log($('#video_background').width());
+	//console.log($(window).width());
 
 	var newVideoSize = bbqk_getNewSize($(window).width(),$(window).height(), $('#video_background').width(),$('#video_background').height());
-	$('#video_background').width(newVideoSize.width).height(newVideoSize.height);
+	$('#video_background').width(newVideoSize.width);
+	//$('#video_background').height(newVideoSize.height);
 }
 
 function bbqk_getNewSize(boxWidth, boxHeight, imgWidth, imgHeight) {

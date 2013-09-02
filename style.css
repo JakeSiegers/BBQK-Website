@@ -8,6 +8,7 @@ Tags: barbeque, kitten, custom, theme, stuff, improv, lolz
 */
 
 body{
+	background:black;
 	/*
 	overflow-y:scroll;
 	margin:0px;
@@ -30,12 +31,25 @@ body{
 }
 
 #video_background {
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+ 	z-index:-1000;
+ 	/*opacity:0.4;
+	filter:alpha(opacity=40);*/
 }
 
+.bbqk-homepageWrap{
+	text-align:center;
+}
+
+.bbqk-center{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/*
 .bbqk-scheduleTable{
 	float:none;
 	margin-left:auto;
@@ -60,8 +74,6 @@ body{
   margin-bottom: 30px;
 }
 
-
-
 .bbqk-jumbo .container {
   position: relative;
   z-index: 2;
@@ -75,5 +87,5 @@ body{
 	left: 0;
 	background: url(img/background3.gif) no-repeat 0px 0px;
 }
-
+*/
 

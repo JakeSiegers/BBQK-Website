@@ -17,11 +17,14 @@
 		<?php wp_head(); ?>
 	</head>
 <body onunload="">
-	<video id="video_background" autoplay loop>
+	<center>
+		<video id="video_background" autoplay loop>
    		<source src="<?php echo get_template_directory_uri(); ?>/video/homepage.mp4" type='video/mp4' />
     	<source src="<?php echo get_template_directory_uri(); ?>/video/homepage.webm" type='video/webm' />
    		<!--<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />-->
-  	</video>
+   		<img src="<?php echo get_template_directory_uri(); ?>/img/rays_fallback.png" title="Your browser does not support the <video> tag"></video>
+  	</video>	
+  	</center>
 	<!--<div class="barbequeLogo">-->
 	
 	<header class="navbar navbar-default navbar-inverse navbar-fixed-top bbqk-nav" role="navigation">

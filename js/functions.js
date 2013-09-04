@@ -1,6 +1,7 @@
 
 var bbqk_bgHeight=0,
 	bbqk_tiltCount=0;
+	bbqk_changingPages=false;
 
 window.onload = function() {
 	bbqk_updateBG();
@@ -18,27 +19,31 @@ window.onload = function() {
 		bbqk_adjustLogoTilt();
 	},0);
 
+	/*
 	$('body').mousemove(function(e){
 		bbqk_bgHeight=e.pageY
 		bbqk_paralaxCatUpdate();
 	});
+	*/
 
 };
 
 function bbqk_adjustLogoTilt(){
 	//$('#bbqk-logo').stop();
-	$('#bbqk-logo').transition({ rotate: ((Math.sin(bbqk_tiltCount)*20)-10)+'deg' });
-	bbqk_tiltCount+=(Math.PI/6);
+	$('#bbqk-logo').css({ rotate: ((Math.sin(bbqk_tiltCount)*20)-10)+'deg' });
+	bbqk_tiltCount+=(Math.PI/128);
 	if(bbqk_tiltCount>(2*Math.PI)){
 		bbqk_tiltCount=0;
 	}
 }
 
+/*
 function bbqk_paralaxCatUpdate(){
 	$('.barbequeLogo').css("background-position", function(){
     	return "0px "+(0-(bbqk_bgHeight/25))+"px";
 	});
 }
+*/
 
 function bbqk_updateBG(){
 	//$('body').css("min-height", function(){ 
@@ -59,6 +64,7 @@ function bbqk_updateBG(){
 	var newVideoSize = bbqk_getNewSize($(window).width(),$(window).height(), $('#video_background').width(),$('#video_background').height());
 	$('#video_background').width(newVideoSize.width);
 	//$('#video_background').height(newVideoSize.height);
+	$('#video_background').css({"margin-left":"-"+($('#video_background').width()/2)+"px"})
 }
 
 function bbqk_getNewSize(boxWidth, boxHeight, imgWidth, imgHeight) {

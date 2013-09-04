@@ -40,7 +40,7 @@
 		<div class="container bbqk-homepageWrap">
 			<div class="row">
 				<div class="col-md-12">
-					<img class="img-responsive bbqk-center" id="bbqk-logo" src="<?php echo get_template_directory_uri(); ?>/img/catLogo.png" />
+					<img class="img-responsive bbqk-center bbqk-logo" id="bbqk-logo" src="<?php echo get_template_directory_uri(); ?>/img/catLogo.png" />
 				</div>
 			</div>
 		</div>

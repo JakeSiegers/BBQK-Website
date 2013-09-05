@@ -37,12 +37,20 @@ body{
   	/*top: 0;
   	left: 0;*/
  	z-index:-1000;
- 	/*opacity:0.4;
-	filter:alpha(opacity=40);*/
+ 	opacity:0;
+	filter:alpha(opacity=0);
 }
 
 .bbqk-homepageWrap{
 	text-align:center;
+}
+
+.bbqk-pageWrap{
+	margin-top:50px;
+}
+
+.bbqk-pageTitle{
+	color:white;
 }
 
 .bbqk-center{

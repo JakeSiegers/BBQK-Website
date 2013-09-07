@@ -3,7 +3,7 @@
 	<head>
 		<title>Barbeque Kitten!</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width user-scalable=0">
 
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -17,14 +17,17 @@
 		<?php wp_head(); ?>
 	</head>
 <body onunload="">
+	<div class="bbqk-videoWrap" id="bbqk-videoWrap">
 	<center>
-		<video id="video_background" autoplay loop>
+	<video class="bbqk-videoBG" id="bbqk-videoBG" autoplay loop>
    		<source src="<?php echo get_template_directory_uri(); ?>/video/homepage.mp4" type='video/mp4' />
     	<source src="<?php echo get_template_directory_uri(); ?>/video/homepage.webm" type='video/webm' />
    		<!--<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />-->
    		<img src="<?php echo get_template_directory_uri(); ?>/img/rays_fallback.png" title="Your browser does not support the <video> tag"></video>
-  	</video>	
-  	</center>
+  	</video>
+  	</center>	
+  	</div>
+  	
 	<!--<div class="barbequeLogo">-->
 	
 	<header class="navbar navbar-default navbar-inverse navbar-fixed-top bbqk-nav" role="navigation">

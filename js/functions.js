@@ -10,12 +10,17 @@ window.onload = function() {
 	bbqk_updateBG();
 	bbqk_showVideo();
 	bbqk_showLogo();
+	bbqk_showContent();
 
 	$('a').bind('click', function(event){
+		if($(this).hasClass('dropdown-toggle')){
+			return;
+		}
 		event.preventDefault();
 		var url = $(this).prop('href');
 		bbqk_hideVideo();
 		bbqk_hideLogo();
+		bbqk_hideContent();
 		window.setTimeout((function(){window.location=url;}),500);
 	});
 	
@@ -47,18 +52,50 @@ function bbqk_showVideo(){
 
 function bbqk_showLogo(){
 	bbqk_movingLogo=true;
-	$('#bbqk-logo').animate({"margin-top":($(window).height()/2)-($('#bbqk-logo').height()/2)+"px"},1000);
+	$('#bbqk-logo').transition({
+		"margin-top":($(window).height()/2)-$('.bbqk-navContainer').height()-($('#bbqk-logo').height()/2)+"px"
+		,opacity:1
+	},1000);
 	bbqk_movingLogo=false;
+}
+
+function bbqk_showContent(){
+	$('.bbqk-pageContentHead').transition({
+		opacity:0.9
+		,'margin-top':'0px'
+	},500);
+	$('.bbqk-headshot').transition({
+		opacity:1
+	},500);
+	$('.bbqk-well').transition({
+		opacity:0.9
+	},500);
+}
+
+function bbqk_hideContent(){
+	$('.bbqk-pageContentHead').transition({
+		opacity:0
+		,'margin-top':'-100px'
+	},500);
+	$('.bbqk-headshot').transition({
+		opacity:0
+	},500);
+	$('.bbqk-well').transition({
+		opacity:0
+	},500);
 }
 
 function bbqk_hideLogo(){
 	bbqk_movingLogo=true;
-	$('#bbqk-logo').animate({"margin-top":"-300px"},1000);
+	$('#bbqk-logo').transition({
+		"margin-top":"-300px"
+		,opacity:0
+	},1000);
 	bbqk_movingLogo=false;
 }
 
 function bbqk_hideVideo(){
-	$('#bbqk-videoWrap').animate({opacity:0},500);
+	$('#bbqk-videoWrap').animate({opacity:0,},500);
 }
 
 function bbqk_adjustLogoTilt(){
@@ -90,7 +127,7 @@ function bbqk_updateBG(){
 	//console.log(($(window).height()/2)-($('#bbqk-logo').height()/2)+"px");
 	//$('#bbqk-logo').stop();
 	if(!bbqk_movingLogo){
-		$('#bbqk-logo').css("margin-top",($(window).height()/2)-($('#bbqk-logo').height()/2)+"px");
+		$('#bbqk-logo').css("margin-top",($(window).height()/2)-$('.bbqk-navContainer').height()-($('#bbqk-logo').height()/2)+"px");
 	}
 
 	//console.log($('#bbqk-videoBG').width());

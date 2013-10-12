@@ -24,27 +24,29 @@
 	</head>
 <body onunload="">
 	<?php
-		//var_dump(get_template_directory_uri());
-
 		if(get_field('background_video_mp4') !== FALSE && get_field('background_video_webm') !== FALSE){
 			$bbqkmp4 = get_field('background_video_mp4');
-			$bbqkwebm = get_field('background_video_webm');
+			//$bbqkwebm = get_field('background_video_webm');
 		}else{
 			$bbqkmp4 = get_template_directory_uri().'/video/homepage.mp4';
-			$bbqkwebm = get_template_directory_uri().'/video/homepage.webm';
+			//$bbqkwebm = get_template_directory_uri().'/video/homepage.webm';
 		}
 	?>
 	<div class="bbqk-videoWrap" id="bbqk-videoWrap">
-	<center>
-	<video class="bbqk-videoBG" id="bbqk-videoBG" autoplay loop>
-   		<source src="<?php echo $bbqkmp4; ?>" type='video/mp4' />
-    	<source src="<?php echo $bbqkwebm; ?>" type='video/webm' />
-   		<!--<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />-->
-   		<img src="<?php echo get_template_directory_uri(); ?>/img/rays_fallback.png" title="Your browser does not support the <video> tag"></video>
-  	</video>
-  	</center>	
+		<center>
+			<video class="bbqk-videoBG" id="bbqk-videoBG" autoplay loop>
+				<source src="<?php echo $bbqkmp4; ?>" type='video/mp4' />
+				<!--<source src="<?php echo $bbqkwebm; ?>" type='video/webm' />-->
+		  	</video>
+	  	</center>	
   	</div>
   	
+  	<div class="bbqk-loader" id="bbqk-loader">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/catLoader.gif"/>
+		<br />
+		Loading...
+	</div>
+
 	<!--<div class="barbequeLogo">-->
 	<div class="container bbqk-navContainer">
 		<div class="navbar navbar-default navbar-inverse bbqk-nav" role="navigation">
@@ -56,6 +58,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="<?php echo get_home_url(); ?>">Barbeque Kitten</a>
+
 			</div>
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">

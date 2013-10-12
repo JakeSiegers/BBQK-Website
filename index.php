@@ -42,7 +42,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="bbqk-logo bbqk-center" id="bbqk-logo">
-							<img class="bbqk-center img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/catLogo.png" />
+							<img class="bbqk-center" src="<?php echo get_template_directory_uri(); ?>/img/lglogo.png" width="50%" style="margin-top:0px; margin-bottom:-60px;"/>
 							<h1 class="bbqk-homeTitle"><?php echo get_bloginfo('name'); ?></h1>
 							<p class="bbqk-homeSlogan"><?php echo get_bloginfo('description'); ?></p>
 						</div>

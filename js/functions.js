@@ -33,9 +33,13 @@ window.onload = function() {
     //	bbqk_paralaxCatUpdate();
 	//}, 0);
 
+	/*
+	//I've decided to remove the sine tilting. It just breaks too much in chrome, and other browsers.
+
 	setInterval(function(){
 		bbqk_adjustLogoTilt();
 	},10);
+	*/
 
 	/*
 	$('body').mousemove(function(e){
@@ -88,7 +92,7 @@ function bbqk_hideContent(){
 function bbqk_hideLogo(){
 	bbqk_movingLogo=true;
 	$('#bbqk-logo').transition({
-		"margin-top":"-300px"
+		"margin-top":($(window).height())-$('.bbqk-navContainer').height()-($('#bbqk-logo').height()/2)+"px"
 		,opacity:0
 	},1000);
 	bbqk_movingLogo=false;

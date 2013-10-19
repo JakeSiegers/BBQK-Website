@@ -4,22 +4,29 @@ var bbqk_bgHeight=0
 	,bbqk_changingPages=false
 	,bbqk_logoTiltInterval=Math.PI/128
 	,bbqk_twoPi=2*Math.PI;
+var isMobile;
 
 window.onload = function() {
+
 	var myVid=document.createElement('video');
 	var support=myVid.canPlayType("video/mp4");
-	if(support != ""){
+	isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	if(isMobile || support == ""){ //make sure video is supported, AND you are not on mobile.
+		setBackgroundFallback();
+		//alert('No video support here!');
+		//$('#bbqk-videoWrap').css('opacity',1);
+		preloadFinished();
+	}else{
+		$('#bbqk-videoBG').css("display","inline");
 		//console.log($('#bbqk-videoBG'))
 		$('#bbqk-videoBG').onloadeddata  =preloadFinished();
-	}else{
-		alert('No video support here - Let Jake know! (Working on the fallback - almost ready)');
 	}
 }
 
 function preloadFinished(){
 	bbqk_hideLoader();
 	bbqk_updateBG();
-	bbqk_showVideo();
+	bbqk_showBackground();
 	//bbqk_showLogo();
 	bbqk_showContent();
 	$('.carousel').carousel();
@@ -32,7 +39,7 @@ function preloadFinished(){
 		event.preventDefault();
 		var url = $(this).prop('href');
 		bbqk_showLoader();
-		bbqk_hideVideo();
+		bbqk_hideBackground();
 		//bbqk_hideLogo();
 		bbqk_hideContent();
 		window.setTimeout((function(){window.location=url;}),500);
@@ -56,11 +63,11 @@ function bbqk_hideLoader(){
 	},500);
 }
 
-function bbqk_showVideo(){
+function bbqk_showBackground(){
 	$('#bbqk-videoWrap').animate({opacity:1},500);
 }
 
-function bbqk_hideVideo(){
+function bbqk_hideBackground(){
 	$('#bbqk-videoWrap').animate({opacity:0,},500);
 }
 
@@ -82,8 +89,8 @@ function bbqk_hideLogo(){
 */
 
 function bbqk_showContent(){
-	$('.bbqk-panel').transition({
-		opacity:0.9
+	$('.bbqk-panel:not(.bbqk-notme)').transition({
+		opacity:1
 		,'margin-top':'0px'
 	},500);
 	$('.bbqk-headshot').transition({
@@ -96,7 +103,7 @@ function bbqk_showContent(){
 }
 
 function bbqk_hideContent(){
-	$('.bbqk-panel').transition({
+	$('.bbqk-panel:not(.bbqk-notme)').transition({
 		opacity:0
 		,'margin-top':'-100px'
 	},500);
@@ -114,10 +121,12 @@ function bbqk_hideContent(){
 
 
 function bbqk_updateBG(){
-
+	if(isMobile){
+		return;
+	}
 	var newVideoSize = bbqk_getNewSize($(window).width(),$(window).height(), $('#bbqk-videoBG').width(),$('#bbqk-videoBG').height());
 	$('#bbqk-videoBG').width(newVideoSize.width);
-
+	
 	$('#bbqk-videoWrap').width($(window).width());
 	$('#bbqk-videoWrap').height($(window).height());
 	

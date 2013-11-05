@@ -9,21 +9,24 @@
 			?>
 		</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width user-scalable=0">
+		<meta name="viewport" content="width=1024 user-scalable=1">
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/icon.ico" />
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,400italic,500,500italic,900italic,700,700italic' rel='stylesheet' type='text/css'>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.transit.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
 		<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
+    	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.theme.css">
+    	<script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
 		<script>
 			function setBackgroundFallback(){
 				$('#bbqk-videoBG').remove();
 				//$('body').css('background-image',"url(<?php echo get_template_directory_uri(); ?>/img/fallback.png)");
 			}
 		</script>
-		<!--<script src="<?php echo get_template_directory_uri(); ?>/js/video.js"></script>-->
 
 		<?php wp_head(); ?>
 	</head>
@@ -38,12 +41,13 @@
 		}
 	?>
 	<div class="bbqk-videoWrap" id="bbqk-videoWrap">
-		<center>
+		<!--<center>
 			<video class="bbqk-videoBG" id="bbqk-videoBG" autoplay loop>
 				<source src="<?php echo $bbqkmp4; ?>" type='video/mp4' />
-				<!--<source src="<?php echo $bbqkwebm; ?>" type='video/webm' />-->
+				<source src="<?php echo $bbqkwebm; ?>" type='video/webm' />
 		  	</video>
-	  	</center>	
+	  	</center>
+	  	-->
   	</div>
   	
   	<div class="bbqk-loader" id="bbqk-loader">
@@ -93,7 +97,12 @@
 							}
 							//var_dump($children);
 							if(count($children)>0){
-								echo '<li class="dropdown">';
+								foreach($children as $child){
+									if($child->ID == get_post()->ID){
+											$active ="active";
+									}
+								}
+								echo '<li class="dropdown '.$active.'">';
 								echo '<a class="dropdown-toggle" data-toggle="dropdown">'.$page->post_title.' <b class="caret"></b></a>';
 								echo '<ul class="dropdown-menu bbqk-dropdown">';
 								echo '<li>';
@@ -131,7 +140,7 @@
 					?>
 				</ul>
 			</div>
-			
+
 		</div>
 	</div>
 	</div>

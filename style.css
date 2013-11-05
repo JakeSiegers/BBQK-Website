@@ -8,9 +8,11 @@ Tags: barbeque, kitten, custom, theme, stuff, improv, lolz
 */
 
 body{
-	background:black;
+	background:black url(img/background.png) no-repeat top center;
 	overflow-x:hidden;
 	overflow-y:scroll;
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
 	/*
 	overflow-y:scroll;
 	margin:0px;
@@ -37,7 +39,7 @@ body{
 	z-index:900;
 	position:absolute;
 	text-align:center;
-	font-weight:bold;
+	font-weight:500;
 	bottom:0px;
 	right:0px;
 	color:white;
@@ -67,7 +69,7 @@ body{
 .bbqk-carousel{
 	opacity:0;
 	filter:alpha(opacity=0);
-	margin-bottom:20px;
+	margin-top:20px;
 	border:1px solid #660000; /*#ca0808;*/
 	border-radius:0px 0px 0px 0px;	
 }
@@ -130,6 +132,7 @@ body{
 }
 
 .bbqk-pageWrap{
+	z-index:900;
 }
 
 .bbqk-textAlignCenter{
@@ -141,13 +144,14 @@ body{
 	margin-right:auto;
 }
 
+/*
 .bbqk-logo{
 	color:white;
-	
-	margin-top:100px;
+	margin-top:20px;
 	opacity:0;
 	filter:alpha(opacity=0);
 }
+*/
 
 .bbqk-pageTitle{
 	color:#FFFFFF;
@@ -167,7 +171,7 @@ body{
 }
 
 .bbqk-panel{
-	margin-top:100px;
+	margin-top:20px;
 	background:rgba(255, 255, 255, 0.7);
 	border-radius:0px 0px 0px 0px;
 	border:#660000 solid 1px; /*border:#ca0808 solid 1px;*/
@@ -181,6 +185,7 @@ body{
 	color:#FFFFFF;
 	border:0px;
 }
+
 
 .bbqk-panel a{
 	color:#660000;
@@ -224,6 +229,7 @@ body{
 
 .bbqk-headshot{
 	border:1px solid #660000;
+	margin-top:20px;
 	margin-bottom:20px;
 	border-radius:0px 0px 0px 0px;
 	opacity:0;

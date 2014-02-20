@@ -1,6 +1,6 @@
 	<!--<div class="container bbqk-footer"><span class=".glyphicon .glyphicon-copyright-mark"></span>2013 Barbeque Kitten</div>-->
 	<!--</div>--><!--BBQK Parallax Logo End Div-->
-	
+
 	<!-- Google Tracking -->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Barbeque Kitten!
-			<?php 
+		<title>
+			<?php
+				echo get_bloginfo('name');
 				if(is_page()){
 					echo " - ".get_the_title();
 				}
 			?>
 		</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=1024 user-scalable=1">
+		<meta name="viewport" content="width=device-width user-scalable=0">
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/icon.ico" />
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,400italic,500,500italic,900italic,700,700italic' rel='stylesheet' type='text/css'>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.transit.min.js"></script>
+		<!--<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.transit.min.js"></script>-->
 		<script src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
 		<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel='stylesheet' type='text/css'>
-    	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
+    	<!--<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
     	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.theme.css">
-    	<script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>
-		<script>
+    	<script src="<?php echo get_template_directory_uri(); ?>/js/owl.carousel.js"></script>-->
+		<!--<script>
 			function setBackgroundFallback(){
 				$('#bbqk-videoBG').remove();
 				//$('body').css('background-image',"url(<?php echo get_template_directory_uri(); ?>/img/fallback.png)");
 			}
-		</script>
+		</script>-->
 
-		<?php wp_head(); ?>
+		<?php
+		function setUpSizeAdjuster($text,$arrayOfSizes){
+			foreach($arrayOfSizes as $sizeHead => $sizeFoot){
+				echo $sizeHead.$text.$sizeFoot;
+			}
+		}
+
+		wp_head();
+
+		?>
+
 	</head>
 <body onunload="">
-	<?php
-		if(get_field('background_video_mp4') !== FALSE && get_field('background_video_webm') !== FALSE){
-			$bbqkmp4 = get_field('background_video_mp4');
-			//$bbqkwebm = get_field('background_video_webm');
-		}else{
-			$bbqkmp4 = get_template_directory_uri().'/video/homepage.mp4';
-			//$bbqkwebm = get_template_directory_uri().'/video/homepage.webm';
-		}
-	?>
-	<div class="bbqk-videoWrap" id="bbqk-videoWrap">
-		<!--<center>
-			<video class="bbqk-videoBG" id="bbqk-videoBG" autoplay loop>
-				<source src="<?php echo $bbqkmp4; ?>" type='video/mp4' />
-				<source src="<?php echo $bbqkwebm; ?>" type='video/webm' />
-		  	</video>
-	  	</center>
-	  	-->
-  	</div>
-  	
+
   	<div class="bbqk-loader" id="bbqk-loader">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/catLoader.gif"/>
 		<br />
@@ -70,16 +63,20 @@
 				<?php
 
 				$sizes = array(
-					 'visible-xs' => array(40,100,-40,-45) //margin of title, width of logo, top, left;
+					 'visible-xs' => array(50,100,-40,-45) //margin of title, width of logo, top, left;
 					,'visible-sm' => array(80,100,-40,-20)
 					,'visible-md' => array(80,100,-40,-20)
 					,'visible-lg' => array(80,100,-40,-20)
 				);
 				foreach($sizes as $size=>$spacing){
+					$extraSmallSizeBonus="";
+					if($size == "visible-xs"){
+						$extraSmallSizeBonus="font-size:13px;";
+					}
 					echo
 						 '<a href="'.get_home_url().'"><img src="'.get_template_directory_uri().'/img/icon.png" style="width:'.$spacing[1].'px; height:'.$spacing[1].'px; top:'.$spacing[2].'px; left:'.$spacing[3].'px;" class="bbqk-navLogo '.$size.'" /></a>'
-						,'<a class="navbar-brand '.$size.'" href="'.get_home_url().'">'							
-							,'<div style="margin-left:'.$spacing[0].'px;">Barbeque Kitten Improv</div>'
+						,'<a class="navbar-brand '.$size.'" href="'.get_home_url().'">'
+							,'<div style="margin-left:'.$spacing[0].'px; '.$extraSmallSizeBonus.'">Barbeque Kitten Improv</div>'
 						,'</a>';
 				}
 				?>
@@ -87,8 +84,8 @@
 
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<?php 
-						$pages = get_pages(array('parent' => 0,'sort_column' => 'menu_order')); 
+					<?php
+						$pages = get_pages(array('parent' => 0,'sort_column' => 'menu_order'));
 						foreach($pages as $page){
 							$active = "";
 							$children = $children = get_pages(array('child_of' => $page->ID));
@@ -111,7 +108,7 @@
 									echo 'View All Members';
 									echo '</a>';
 									echo '</li>';
-									echo '<li role="presentation" class="divider bbqk-divider"></li>';	
+									echo '<li role="presentation" class="divider bbqk-divider"></li>';
 								}else{
 									//var_dump($page);
 									echo 'View ';
@@ -134,8 +131,8 @@
 								echo '<a href="'.get_permalink($page->ID).'">';
 								echo $page->post_title;
 								echo '</a>';
-								echo '</li>';	
-							}	
+								echo '</li>';
+							}
 						}
 					?>
 				</ul>
@@ -144,5 +141,3 @@
 		</div>
 	</div>
 	</div>
-	
-	

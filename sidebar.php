@@ -8,7 +8,7 @@
 </div>
 <div class="panel panel-default bbqk-panel">
 	<div class="panel-heading">
-		Upcoming Shows (Fall 2013)
+		Upcoming Shows (Spring 2014)
 	</div>
 	<div class="panel-body">
 		<table class="table bbqk-table">
@@ -18,6 +18,27 @@
 				<th>Location</th>
 			</tr>
 			<tr>
+				<td>February 15th</td>
+				<td>7:30 & 10pm</td>
+				<td>Hartman Center</td>
+			</tr>
+			<tr>
+				<td>March 8th</td>
+				<td>7:30 & 10pm</td>
+				<td>TBD</td>
+			</tr>
+			<tr>
+				<td>April 12th</td>
+				<td>7:30 & 10pm</td>
+				<td>TBD</td>
+			</tr>
+			<tr>
+				<td>May 6th</td>
+				<td>8pm Only</td>
+				<td>Hartman Center</td>
+			</tr>
+			<!--Upcoming Shows (Fall 2013)-->
+			<!--<tr>
 				<td>September 14th</td>
 				<td>7:30 & 10pm</td>
 				<td>Bradley Hall (150)</td>
@@ -36,7 +57,7 @@
 				<td>December 10th</td>
 				<td>8pm Only</td>
 				<td>Bradley Hall (150)</td>
-			</tr>
+			</tr>-->
 		</table>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-<div class="row">
+
 	<div class="col-md-3">
 		<img class="img-responsive bbqk-headshot bbqk-center" src="<?php the_field('headshot');?>" />
 	</div>
@@ -22,4 +22,3 @@
 	<div class="col-md-4">
 		<?php get_sidebar(); ?>
 	</div>
-</div>

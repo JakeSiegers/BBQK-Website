@@ -13,25 +13,6 @@ body{
 	overflow-y:scroll;
 	font-family: 'Roboto', sans-serif;
 	font-weight:400;
-	/*
-	overflow-y:scroll;
-	margin:0px;
-	margin-top:50px;
-	position: relative;
-	padding: 40px 0;
-	color: #fff;
-	background: black;
-	background: -moz-linear-gradient(45deg,  black 0%, #771a1a 100%); 
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,black), color-stop(100%,#771a1a)); 
-	background: -webkit-linear-gradient(45deg,  black 0%,#771a1a 100%); 
-	background: -o-linear-gradient(45deg,  black 0%,#771a1a 100%); 
-	background: -ms-linear-gradient(45deg,  black 0%,#771a1a 100%); 
-	background: linear-gradient(45deg,  black 0%,#771a1a 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='black', endColorstr='#771a1a',GradientType=1 ); 
-	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-	 -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-	      box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-	 */
 }
 
 .bbqk-loader{
@@ -46,14 +27,7 @@ body{
 }
 
 .bbqk-navLogo{
-	/*
-	width:200px;
-	height:200px;
-	*/
 	position:absolute;
-	/*top:-75px;
-	left:-30px;*/
-
 }
 
 .bbqk-notme{
@@ -147,15 +121,6 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 }
-
-/*
-.bbqk-logo{
-	color:white;
-	margin-top:20px;
-	opacity:0;
-	filter:alpha(opacity=0);
-}
-*/
 
 .bbqk-pageTitle{
 	color:#FFFFFF;
@@ -267,37 +232,17 @@ body{
 }
 
 .bbqk-slideShow #bbqk-slideShowImg1{
-	background-image: url(img/slide1.png);
+	background-image: url(img/slide4.jpg);
 }
 .bbqk-slideShow #bbqk-slideShowImg2{
-	background-image: url(img/slide2.png);
+	background-image: url(img/slide1.png);
 }
 .bbqk-slideShow #bbqk-slideShowImg3{
+	background-image: url(img/slide2.png);
+}
+.bbqk-slideShow #bbqk-slideShowImg4{
 	background-image: url(img/slide3.png);
 }
-/*
-.bbqk-pageContentHead{
-	background:#ca0808;
-	border:0px;
-	border-radius:5px 5px 0px 0px;
-	padding-top:5px;
-	padding-bottom:5px;
-	margin:0px;
-	opacity:0;
-	filter:alpha(opacity=0);
-	margin-top:100px;
-}
-.bbqk-well{
-	min-height:500px;
-	color:#FFFFFF;
-	background: url('img/redfade.png') repeat-x top left #003e7b;
-	border:1px solid #ca0808;
-	border-radius:0px;
-	opacity:0;
-	padding-top:5px;
-	filter:alpha(opacity=0);
-}
-*/
 
 .bbqk-headshot{
 	border:1px solid #660000;
@@ -307,46 +252,6 @@ body{
 	opacity:0;
 	filter:alpha(opacity=0);
 }
-
-/*
-.bbqk-scheduleTable{
-	float:none;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-.bbqk-jumbo{
-	background:none;
-	text-align: center;
-	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-}
-
-.bbqk-jumbo h1 {
-  font-size: 100px;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-.bbqk-jumbo p {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.25;
-  margin-bottom: 30px;
-}
-
-.bbqk-jumbo .container {
-  position: relative;
-  z-index: 2;
-}
-.barbequeLogo{
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: url(img/background3.gif) no-repeat 0px 0px;
-}
-*/
 
 .bbqk-modal .modal-header{
 	background:#660000;
@@ -367,5 +272,125 @@ body{
 	margin-left:auto;
 	position:fixed;
 	bottom: 15%;
+}
+
+.bbqk-deadKittenHover{
+	-webkit-animation: bbqk_deadKittenHoverAnimation 0.5s ease-in-out infinite 0s;
+	   -moz-animation: bbqk_deadKittenHoverAnimation 0.5s ease-in-out infinite 0s;
+	     -o-animation: bbqk_deadKittenHoverAnimation 0.5s ease-in-out infinite 0s;
+	    -ms-animation: bbqk_deadKittenHoverAnimation 0.5s ease-in-out infinite 0s;
+	        animation: bbqk_deadKittenHoverAnimation 0.5s ease-in-out infinite 0s;
+}
+
+@-webkit-keyframes bbqk_deadKittenHoverAnimation {
+	0% {-webkit-transform: scale(1) rotate(0deg);}
+	50% {-webkit-transform: scale(0.9) rotate(1deg);}
+	100% {-webkit-transform: scale(1) rotate(0deg);}
+}
+@-moz-keyframes bbqk_deadKittenHoverAnimation {
+	0% {-moz-transform: scale(1) rotate(0deg);}
+	50% {-moz-transform: scale(0.9) rotate(1deg);}
+	100% {-moz-transform: scale(1) rotate(0deg);}
+}
+@-o-keyframes bbqk_deadKittenHoverAnimation {
+	0% {-o-transform: scale(1) rotate(0deg);}
+	50% {-o-transform: scale(0.9) rotate(1deg);}
+	100% {-o-transform: scale(1) rotate(0deg);}
+}
+@-ms-keyframes bbqk_deadKittenHoverAnimation {
+	0% {-ms-transform: scale(1) rotate(0deg);}
+	50% {-ms-transform: scale(0.9) rotate(1deg);}
+	100% {-ms-transform: scale(1) rotate(0deg);}
+}
+@keyframes bbqk_deadKittenHoverAnimation {
+	0% {transform: scale(1) rotate(0deg);}
+	50% {transform: scale(0.9) rotate(1deg);}
+	100% {transform: scale(1) rotate(0deg);}
+}
+
+.bbqk-kittenLogoTwist{
+	-webkit-animation: bbqk_kittenLogoTwistAnimation 0.2s ease-in-out infinite 0s;
+	   -moz-animation: bbqk_kittenLogoTwistAnimation 0.2s ease-in-out infinite 0s;
+	     -o-animation: bbqk_kittenLogoTwistAnimation 0.2s ease-in-out infinite 0s;
+	    -ms-animation: bbqk_kittenLogoTwistAnimation 0.2s ease-in-out infinite 0s;
+	        animation: bbqk_kittenLogoTwistAnimation 0.2s ease-in-out infinite 0s;
+}
+
+@-webkit-keyframes bbqk_kittenLogoTwistAnimation {
+	0% {-webkit-transform: rotate(0deg);}
+	50% {-webkit-transform: rotate(10deg);}
+	100% {-webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes bbqk_kittenLogoTwistAnimation {
+	0% {-moz-transform: rotate(0deg);}
+	50% {-moz-transform: rotate(10deg);}
+	100% {-moz-transform: rotate(0deg);}
+}
+@-o-keyframes bbqk_kittenLogoTwistAnimation {
+	0% {-o-transform: rotate(0deg);}
+	50% {-o-transform: rotate(10deg);}
+	100% {-o-transform: rotate(0deg);}
+}
+@-ms-keyframes bbqk_kittenLogoTwistAnimation {
+	0% {-ms-transform: rotate(0deg);}
+	50% {-ms-transform: rotate(10deg);}
+	100% {-ms-transform: rotate(0deg);}
+}
+@keyframes bbqk_kittenLogoTwistAnimation {
+	0% {transform: rotate(0deg);}
+	50% {transform: rotate(10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+ width: 90%;
+ position: relative;
+ background: #E6C44B;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #C7AA42;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -1.5em;
+ border-right-width: 1em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -1.5em;
+ border-left-width: 1em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #660000 transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+.non-semantic-protector { 
+	position: relative;
+	margin-top:-40px;
+	z-index: 1;
+ 	margin-left: auto;
+ 	margin-right: auto;
 }
 

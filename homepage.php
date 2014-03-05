@@ -1,5 +1,5 @@
 <script>
-			var bbqk_totalSlides = 3;
+			var bbqk_totalSlides = 4;
 			var bbqk_currentSlide=1;
 			var bbqk_previousSlide = bbqk_totalSlides;
 			$(function(){
@@ -44,6 +44,9 @@
 			<li>
 				<span id="bbqk-slideShowImg3"></span>
 			</li>
+			<li>
+				<span id="bbqk-slideShowImg4"></span>
+			</li>
 		</ul>
 
 
@@ -63,7 +66,7 @@
 					 '<div class="visible-lg" style="margin 50px; font-weight:400; font-size:30px; background:rgba(0,0,0,0.8); padding:10px;">' => '</div>'
 					,'<div class="visible-md" style="margin 50px; font-weight:400; font-size:20px; background:rgba(0,0,0,0.8); padding:10px;">' => '</div>'
 					,'<div class="visible-sm" style="margin 50px; font-weight:400; font-size:15px; background:rgba(0,0,0,0.8); padding:10px;">' => '</div>'
-					,'<div class="visible-xs" style="margin 50px; font-weight:400; font-size:10px; background:rgba(0,0,0,0.8); padding:10px;">' => '<br />(Welcome to the mobile site! It\'s in beta!)</div>'
+					,'<div class="visible-xs" style="margin 50px; font-weight:400; font-size:10px; background:rgba(0,0,0,0.8); padding:10px;">' => '<br />(Hello Smartphone! ^.^)</div>'
 
 				));
 			?>

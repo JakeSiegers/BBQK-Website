@@ -30,11 +30,29 @@ $(function() {
 			bbqk_loadDeadKitten($(this));
 	});
 
+	$(".bbqk-navLogo").bind('mouseover', function(event){
+			$(this).addClass("bbqk-kittenLogoTwist");
+	});
+	$(".bbqk-navLogo").bind('mouseout', function(event){
+			$(this).removeClass("bbqk-kittenLogoTwist");
+	});
+
 	$(".bbqk-dead-kitten").bind('mouseover', function(event){
 			$('body').css("cursor", "pointer");
+			$(this).addClass("bbqk-deadKittenHover");
 	});
 	$(".bbqk-dead-kitten").bind('mouseout', function(event){
 			$('body').css("cursor", "auto");
+			$(this).removeClass("bbqk-deadKittenHover");
+	});
+
+	$(".bbqk-kastMember").bind('mouseover', function(event){
+			$('body').css("cursor", "pointer");
+			$(this).addClass("bbqk-deadKittenHover");
+	});
+	$(".bbqk-kastMember").bind('mouseout', function(event){
+			$('body').css("cursor", "auto");
+			$(this).removeClass("bbqk-deadKittenHover");
 	});
 });
 

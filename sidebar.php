@@ -11,7 +11,9 @@
 		Check us out on Facebook!
 	</div>
 	<div class="panel-body">
-		<div class="fb-like-box" data-href="https://www.facebook.com/pages/BBQ-Kitten-Improv-Comedy-Troupe/89641877336" data-colorscheme="light" data-width="328" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+		<div style="overflow:scroll">
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/BBQ-Kitten-Improv-Comedy-Troupe/89641877336" data-colorscheme="light" data-width="100%" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+		</div>
 	</div>
 </div>
 <!--<div class="panel panel-default bbqk-panel">

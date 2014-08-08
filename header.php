@@ -4,6 +4,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Anyone can come, anyone can play! BBQ Kitten is Bradley's premier improv troupe. The goal of the troupe is to provide fun and entertainment to its fans through performances based on impromptu topics provided by an audience. The troupe members also seek to provide a means to boost self-esteem and confidence to those who participate at open rehearsals. ">
+		<meta name="keywords" content="BBQ,Kitten,Improv,Bradley,University,Comedy,Troupe,BBQK,Barbeque">
+		<meta name="author" content="The Koding Kitten">
 		<title><?php echo get_bloginfo('name').(is_page()?' - '.get_the_title():'');?></title>
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/icon.ico" />
 		<link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel='stylesheet' type='text/css'>

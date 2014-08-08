@@ -6,7 +6,7 @@
 		<div class="panel panel-default bbqk-panel">
 			<div class="panel-heading">
 				<h3 class="bbqk-pageTitle"><?php the_title(); ?></h3>
-				<p class="bbqk-pageSlogan">The <?php the_field('kitten_name');?></p>
+				<p class="bbqk-pageSlogan">The <?php the_field('kitten_name');?> Kitten!</p>
 			</div>
 			<div class="panel-body">
 				<h4>Education</h4><?php the_field('year_/_major');?>

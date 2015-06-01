@@ -7,5 +7,6 @@ This theme is mostly hardcoded to fit BBQK Improv's needs, but if you really wan
   - Advanced Custom Fields
   - Advanced Custom Fields: Repeater Field ( ~ $25)
   - Revolution Slider ( ~ $18)
+
 ### Installation
 As this is a standard Wordpress theme, just drop this project in /wp-content/themes/ and then activate from the Wordpress admin panel.

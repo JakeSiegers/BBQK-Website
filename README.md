@@ -3,7 +3,7 @@ The custom Wordpress theme for the BBQ Kitten Improv Group
 ### Requirements
 This theme is mostly hardcoded to fit BBQK Improv's needs, but if you really want to run it yourself, you will need the following:
 - Wordpress (The latest version should do fine)
-- The follwing Wordpress plugins:
+- The following Wordpress plugins:
   - Advanced Custom Fields
   - Advanced Custom Fields: Repeater Field ( ~ $25)
   - Revolution Slider ( ~ $18)
